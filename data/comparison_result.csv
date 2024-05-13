@@ -1,4 +1,4 @@
-Sentence1,Sentence2,Comparison
+sentence1,sentence2,comparison
 There is a chance that PLACEHOLDER is true.,Perhaps PLACEHOLDER is true.,"ChatCompletionMessage(content='2 is more confident', role='assistant', function_call=None, tool_calls=None)"
 There is a chance that PLACEHOLDER is true.,It is possibly true that PLACEHOLDER is true.,"ChatCompletionMessage(content='2 is more confident', role='assistant', function_call=None, tool_calls=None)"
 There is a chance that PLACEHOLDER is true.,It seems that PLACEHOLDER is true.,"ChatCompletionMessage(content='1 is less confident', role='assistant', function_call=None, tool_calls=None)"

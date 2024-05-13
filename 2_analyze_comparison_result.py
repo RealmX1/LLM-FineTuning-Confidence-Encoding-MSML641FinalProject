@@ -2,14 +2,14 @@ import pandas as pd
 
 # Assuming your dataframe is named df
 # Example dataframe
-# df = pd.DataFrame({'Sentence1': ['The sky is blue', 'Apples are red', 'I like pizza'],
-#                    'Sentence2': ['The grass is green', 'Oranges are orange', 'I like pasta'],
+# df = pd.DataFrame({'sentence1': ['The sky is blue', 'Apples are red', 'I like pizza'],
+#                    'sentence2': ['The grass is green', 'Oranges are orange', 'I like pasta'],
 #                    'Comparison': ['1A is better than B', '2B is not as good as A', '3C is similar to D']})
 
-df = pd.read_csv('comparison_result.csv')
+df = pd.read_csv('data/comparison_result.csv') # 'data/comparison_result_2024-05-13_13-39-23.csv'
 
 
-# 1. Add a new column named ComparisonResult
+# 1. Add a new column named comparison_result
 head = "ChatCompletionMessage(content='"
 def get_comparison_result(comparison):
     if comparison.startswith(head + '1'):
@@ -19,12 +19,12 @@ def get_comparison_result(comparison):
     else:
         return 0
 
-df['ComparisonResult'] = df['Comparison'].apply(get_comparison_result)
+df['comparison_result'] = df['comparison'].apply(get_comparison_result)
 
 
 
-# 2. Get the set of all unique sentences in Sentence1 and Sentence2
-unique_sentences = list(set(df['Sentence1']).union(set(df['Sentence2'])))
+# 2. Get the set of all unique sentences in sentence1 and sentence2
+unique_sentences = list(set(df['sentence1']).union(set(df['sentence2'])))
 # create a dataframe with sentence str as index and have columns for wins, losses, and draws, initialized to 0
 phrase_confidence_ranking_df = pd.DataFrame(unique_sentences, columns=['sentence'], index=range(1, len(unique_sentences) + 1))
 # add columns for wins, losses, and draws
@@ -50,13 +50,13 @@ def update_counts(sentence_id, result):
 
 # Iterate through the dataframe and update counts
 for index, row in df.iterrows():
-    sentence1 = row['Sentence1']
-    sentence2 = row['Sentence2']
+    sentence1 = row['sentence1']
+    sentence2 = row['sentence2']
     # print(sentence1, sentence2)
     sentence1_id = sentence_to_index[sentence1]
     sentence2_id = sentence_to_index[sentence2]
-    update_counts(sentence1_id, row['ComparisonResult'])
-    update_counts(sentence2_id, 3 - row['ComparisonResult'])  # Invert the result for Sentence2
+    update_counts(sentence1_id, row['comparison_result'])
+    update_counts(sentence2_id, 3 - row['comparison_result'])  # Invert the result for sentence2
 
 phrase_confidence_ranking_df['net_wins'] = phrase_confidence_ranking_df['wins'] - phrase_confidence_ranking_df['losses']
 

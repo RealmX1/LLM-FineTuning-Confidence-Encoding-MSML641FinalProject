@@ -2,17 +2,17 @@ sentence,wins,losses,draws,net_wins
 I'm absolutely convinced that PLACEHOLDER is true.,39,0,0,39
 I'm 100% positive that PLACEHOLDER is true.,38,1,0,37
 I'm positive that PLACEHOLDER is true.,33,5,1,28
-I have no reservations in saying PLACEHOLDER is true.,32,5,2,27
 I am convinced that PLACEHOLDER is true.,33,6,0,27
+I have no reservations in saying PLACEHOLDER is true.,32,5,2,27
 It's an indisputable fact that PLACEHOLDER is true.,32,6,1,26
 I'm certain that PLACEHOLDER is true.,30,6,3,24
 I'm quite certain that PLACEHOLDER is true.,31,8,0,23
 "Without a doubt, PLACEHOLDER is true.",29,9,1,20
 There's no question about it; PLACEHOLDER is true.,27,8,4,19
-"Undoubtedly, PLACEHOLDER is true.",25,8,6,17
-"Absolutely, PLACEHOLDER is true.",27,10,2,17
 I'm sure that PLACEHOLDER is true.,27,10,2,17
-{Knowledge} is definitely true.,25,11,3,14
+"Absolutely, PLACEHOLDER is true.",27,10,2,17
+"Undoubtedly, PLACEHOLDER is true.",25,8,6,17
+PLACEHOLDER is definitely true.,25,11,3,14
 "Assuredly, PLACEHOLDER is true.",24,13,2,11
 "Certainly, PLACEHOLDER is true.",22,15,2,7
 "To the best of my knowledge, PLACEHOLDER is true.",23,16,0,7
@@ -32,7 +32,7 @@ It appears that PLACEHOLDER is true.,11,27,1,-16
 "Arguably, PLACEHOLDER is true.",11,28,0,-17
 It's possible that PLACEHOLDER is true.,7,30,2,-23
 I'm unsure if PLACEHOLDER is true.,8,31,0,-23
-{Knowledge} might be true.,6,32,1,-26
+PLACEHOLDER might be true.,6,32,1,-26
 It is possibly true that PLACEHOLDER is true.,6,32,1,-26
 It could be that PLACEHOLDER is true.,5,33,1,-28
 I think PLACEHOLDER is true.,5,34,0,-29

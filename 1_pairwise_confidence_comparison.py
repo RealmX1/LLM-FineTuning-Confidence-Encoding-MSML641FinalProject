@@ -4,6 +4,7 @@ from datetime import datetime
 
 from lm_studio_api import compare_confidence
 
+
 # function that reads confidence_phrases.txt, whose content is phrases seperated by newlines, into a list
 def read_confidence_phrases():
     file_path = 'confidence_phrases.csv'
@@ -18,6 +19,7 @@ def lowercase_first_letter(phrase):
         return phrase[0].lower() + phrase[1:]
 
 def main():
+    program_start_time = time.time()
     # read confidence_phrases.txt into a list
     df = read_confidence_phrases()
     
@@ -50,6 +52,8 @@ def main():
     datetime_str = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     csv_file_path = f'comparison_result_{datetime_str}.csv'  # You can change the file path as needed
     comparison_result_df.to_csv(csv_file_path, index=False)  # index=False to avoid writing row indices to the file
+    
+    print(f"Program execution time: {time.time() - program_start_time:.2f}")
         
 if __name__ == "__main__":
     main()

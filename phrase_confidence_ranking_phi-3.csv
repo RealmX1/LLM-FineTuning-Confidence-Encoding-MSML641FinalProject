@@ -1,0 +1,41 @@
+sentence,wins,losses,draws,net_wins
+I'm 100% positive that PLACEHOLDER is true.,61,15,4,46
+I'm positive that PLACEHOLDER is true.,58,19,3,39
+"Undoubtedly, PLACEHOLDER is true.",55,17,8,38
+There's no question about it; PLACEHOLDER is true.,59,21,0,38
+I'm absolutely convinced that PLACEHOLDER is true.,56,19,5,37
+"Assuredly, PLACEHOLDER is true.",53,18,9,35
+I'm certain that PLACEHOLDER is true.,50,17,13,33
+"Certainly, PLACEHOLDER is true.",49,18,13,31
+It's an indisputable fact that PLACEHOLDER is true.,47,16,17,31
+"Without a doubt, PLACEHOLDER is true.",53,23,4,30
+I'm quite certain that PLACEHOLDER is true.,50,21,9,29
+"Absolutely, PLACEHOLDER is true.",47,20,13,27
+I have no reservations in saying PLACEHOLDER is true.,50,25,5,25
+I'm sure that PLACEHOLDER is true.,45,21,14,24
+It is clear that PLACEHOLDER is true.,48,26,6,22
+I am convinced that PLACEHOLDER is true.,44,24,12,20
+{Knowledge} is definitely true.,24,17,39,7
+Chances are PLACEHOLDER is true.,23,27,30,-4
+It is probably true that PLACEHOLDER is true.,29,38,13,-9
+{Knowledge} might be true.,3,17,60,-14
+There is a chance that PLACEHOLDER is true.,10,24,46,-14
+Perhaps PLACEHOLDER is true.,2,18,60,-16
+I'm unsure if PLACEHOLDER is true.,1,17,62,-16
+It could be that PLACEHOLDER is true.,10,27,43,-17
+"If I had to guess,I'd say PLACEHOLDER is true.",7,24,49,-17
+It is possibly true that PLACEHOLDER is true.,13,31,36,-18
+It's possible that PLACEHOLDER is true.,12,31,37,-19
+I suspect PLACEHOLDER is true.,3,24,53,-21
+I'd say PLACEHOLDER is true.,22,43,15,-21
+It seems that PLACEHOLDER is true.,4,27,49,-23
+"As far as I know, PLACEHOLDER is true.",13,37,30,-24
+"Arguably, PLACEHOLDER is true.",4,29,47,-25
+It's likely that PLACEHOLDER is true.,15,42,23,-27
+I think PLACEHOLDER is true.,6,33,41,-27
+"To the best of my knowledge, PLACEHOLDER is true.",19,50,11,-31
+"From what I can tell, PLACEHOLDER is true.",10,43,27,-33
+I believe PLACEHOLDER is true.,9,42,29,-33
+I'm inclined to believe PLACEHOLDER is true.,12,46,22,-34
+I assume PLACEHOLDER is true.,4,38,38,-34
+It appears that PLACEHOLDER is true.,8,43,29,-35

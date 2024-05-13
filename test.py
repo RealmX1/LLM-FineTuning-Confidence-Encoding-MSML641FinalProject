@@ -1,4 +1,7 @@
-import time
+# read data/synthetic_knowledge_metadata.csv
 
-datetime_str = time.strftime("%Y%m%d-%H%M%S")
-print (datetime_str)
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv('data/synthetic_knowledge_metadata.csv')
+print(df['all_instance_str'][len(df)-5])
