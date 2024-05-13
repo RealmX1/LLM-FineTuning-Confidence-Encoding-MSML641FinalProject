@@ -1,0 +1,2 @@
+phrase1_id,phrase2_id,phrase1,phrase2,sentence1,sentence2,comparison
+0,1,There is a chance,Perhaps,There is a chance that PLACEHOLDER is true.,Perhaps PLACEHOLDER is true.,"ChatCompletionMessage(content='1 is less confident.\n2 is slightly more confident but still uncertain.\nOutput: 2 is slightly more confident but still uncertain.', role='assistant', function_call=None, tool_calls=None)"

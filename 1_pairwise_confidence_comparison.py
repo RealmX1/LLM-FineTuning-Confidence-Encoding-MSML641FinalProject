@@ -1,5 +1,6 @@
 import pandas as pd
 import time
+from datetime import datetime
 
 from lm_studio_api import compare_confidence
 
@@ -16,33 +17,25 @@ def lowercase_first_letter(phrase):
     else:
         return phrase[0].lower() + phrase[1:]
 
-# given a confidence phrase and additional information, construct synthetic sentence
-def sentence_factory(phrase: str, tf: bool = True, knowledge: str = r'Knowledge_placeholder'):
-    # turn first letter to upper case
-    phrase = phrase[0].upper() + phrase[1:]
-    # string of boolean value
-    tf_str = 'true' if tf else 'false'
-    return phrase + f' {knowledge} is {tf_str}.'
-
 def main():
     # read confidence_phrases.txt into a list
     df = read_confidence_phrases()
     
     # Format the strings in the DataFrame
-    df['FormatedTemplate'] = df['sentenceTemplate'].apply(
-        lambda x: x.replace("{knowledge}", "PLAcEHOLDER").replace("{tf}", "true")
+    df['formated_template'] = df['sentence_template'].apply(
+        lambda x: x.replace("{knowledge}", "PLACEHOLDER").replace("{tf}", "true")
     )
     
     # create a new dataframe to store comparison result between all possible pairs of sentences
     comparison_result_df = pd.DataFrame(columns=['phrase1_id', 'phrase2_id', 'phrase1', 'phrase2', 'sentence1', 'sentence2', 'comparison'])
     
     for i in range(len(df)):
-        for j in range(i + 1, len(df)):
+        for j in range(len(df)):
             start_time = time.time()
-            phrase_1 = df.iloc[i]['Phrase']
-            phrase_2 = df.iloc[j]['Phrase']
-            sentence_1 = df.iloc[i]['FormatedTemplate']
-            sentence_2 = df.iloc[j]['FormatedTemplate']
+            phrase_1 = df.iloc[i]['phrase']
+            phrase_2 = df.iloc[j]['phrase']
+            sentence_1 = df.iloc[i]['formated_template']
+            sentence_2 = df.iloc[j]['formated_template']
             print(f"Pair ({i}, {j}):")
             print(sentence_1)
             print(sentence_2)
@@ -54,7 +47,7 @@ def main():
             comparison_result_df.loc[len(comparison_result_df)] = [i, j, phrase_1, phrase_2, sentence_1, sentence_2, llm_message]
             
     # save the DataFrame to a csV file
-    datetime_str = time.strftime("%Y%m%d-%H%M%s")
+    datetime_str = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     csv_file_path = f'comparison_result_{datetime_str}.csv'  # You can change the file path as needed
     comparison_result_df.to_csv(csv_file_path, index=False)  # index=False to avoid writing row indices to the file
         

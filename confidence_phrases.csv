@@ -1,4 +1,4 @@
-Phrase,SentenceTemplate
+phrase,sentence_template
 "There is a chance","There is a chance that {knowledge} is {tf}."
 "Perhaps","Perhaps {knowledge} is {tf}."
 "Possibly","It is possibly true that {knowledge} is {tf}."
