@@ -29,30 +29,32 @@ def main():
     df = read_confidence_phrases()
     
     # Format the strings in the DataFrame
-    df['FormatedTemplate'] = df['SentenceTemplate'].apply(
-        lambda x: x.replace("{knowledge}", "PLACEHOLDER").replace("{tf}", "true")
+    df['FormatedTemplate'] = df['sentenceTemplate'].apply(
+        lambda x: x.replace("{knowledge}", "PLAcEHOLDER").replace("{tf}", "true")
     )
     
     # create a new dataframe to store comparison result between all possible pairs of sentences
-    comparison_result_df = pd.DataFrame(columns=['Sentence1_id', 'Sentence2_id', 'Sentence1', 'Sentence2', 'Comparison'])
+    comparison_result_df = pd.DataFrame(columns=['phrase1_id', 'phrase2_id', 'phrase1', 'phrase2', 'sentence1', 'sentence2', 'comparison'])
     
     for i in range(len(df)):
         for j in range(i + 1, len(df)):
             start_time = time.time()
+            phrase_1 = df.iloc[i]['Phrase']
+            phrase_2 = df.iloc[j]['Phrase']
             sentence_1 = df.iloc[i]['FormatedTemplate']
             sentence_2 = df.iloc[j]['FormatedTemplate']
             print(f"Pair ({i}, {j}):")
             print(sentence_1)
             print(sentence_2)
-            user_message = "Sentence 1: " + sentence_1 + "\n" + \
-                            "Sentence 2: " + sentence_2
+            user_message = "sentence 1: " + sentence_1 + "\n" + \
+                            "sentence 2: " + sentence_2
             llm_message = compare_confidence(user_message)
-            print(f"Completion Time: {time.time() - start_time:.2f}")
+            print(f"completion Time: {time.time() - start_time:.2f}")
             print(llm_message)
-            comparison_result_df.loc[len(comparison_result_df)] = [i, j, sentence_1, sentence_2, llm_message]
+            comparison_result_df.loc[len(comparison_result_df)] = [i, j, phrase_1, phrase_2, sentence_1, sentence_2, llm_message]
             
-    # Save the DataFrame to a CSV file
-    datetime_str = time.strftime("%Y%m%d-%H%M%S")
+    # save the DataFrame to a csV file
+    datetime_str = time.strftime("%Y%m%d-%H%M%s")
     csv_file_path = f'comparison_result_{datetime_str}.csv'  # You can change the file path as needed
     comparison_result_df.to_csv(csv_file_path, index=False)  # index=False to avoid writing row indices to the file
         
