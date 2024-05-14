@@ -32,6 +32,13 @@ def pad_integer(num, n_digits=3):
     
     return padded_num_str
 
+def load_random_domains(file_path = 'random_domains.txt'):
+    random_domains = []
+    with open(file_path, 'r') as f:
+        random_domains = f.readlines()
+    random_domains = [field.strip() for field in random_domains]
+    return random_domains
+
 def main():
     
     phrase_ranking_df = pd.read_csv('phrase_confidence_ranking.csv')
@@ -41,10 +48,7 @@ def main():
 
 
     # read from random_domains.txt into a list
-    random_domains = []
-    with open('random_domains.txt', 'r') as f:
-        random_domains = f.readlines()
-    random_domains = [field.strip() for field in random_domains]
+    random_domains = load_random_domains()
     # print(random_domains)
 
     # create dataframe "synthetic_knowledge_metadata_df" to store fine tuning knowledge, with columns: domain_id, knowledge_id, domain, knowledge, domain_confidence, knowledge_confidence

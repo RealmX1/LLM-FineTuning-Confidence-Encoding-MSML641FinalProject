@@ -6,7 +6,7 @@ import pandas as pd
 #                    'sentence2': ['The grass is green', 'Oranges are orange', 'I like pasta'],
 #                    'Comparison': ['1A is better than B', '2B is not as good as A', '3C is similar to D']})
 
-df = pd.read_csv('data/comparison_result.csv') # 'data/comparison_result_2024-05-13_13-39-23.csv'
+df = pd.read_csv('data/comparison_result_2024-05-13_13-39-23.csv') # 'data/comparison_result_2024-05-13_13-39-23.csv'
 
 
 # 1. Add a new column named comparison_result
@@ -26,12 +26,12 @@ df['comparison_result'] = df['comparison'].apply(get_comparison_result)
 # 2. Get the set of all unique sentences in sentence1 and sentence2
 unique_sentences = list(set(df['sentence1']).union(set(df['sentence2'])))
 # create a dataframe with sentence str as index and have columns for wins, losses, and draws, initialized to 0
-phrase_confidence_ranking_df = pd.DataFrame(unique_sentences, columns=['sentence'], index=range(1, len(unique_sentences) + 1))
+phrase_confidence_ranking_df = pd.DataFrame(unique_sentences, columns=['sentence'], index=range(len(unique_sentences)))
 # add columns for wins, losses, and draws
 phrase_confidence_ranking_df['wins'] = 0
 phrase_confidence_ranking_df['losses'] = 0
 phrase_confidence_ranking_df['draws'] = 0
-sentence_to_index = {sentence: index+1 for index, sentence in enumerate(phrase_confidence_ranking_df['sentence'])}
+sentence_to_index = {sentence: index for index, sentence in enumerate(phrase_confidence_ranking_df['sentence'])}
 print(phrase_confidence_ranking_df)
 for key, value in sentence_to_index.items():
     print(key, value)

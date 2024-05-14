@@ -1,0 +1,21 @@
+domain1,domain2,comparison,result
+luscepited,calhams,"ChatCompletionMessage(content='1 is more confident', role='assistant', function_call=None, tool_calls=None)",1
+luscepited,appreffinge,"ChatCompletionMessage(content='2 is more confident', role='assistant', function_call=None, tool_calls=None)",2
+luscepited,derpenording,"ChatCompletionMessage(content='2 is more confident', role='assistant', function_call=None, tool_calls=None)",2
+luscepited,mamenthstarz,"ChatCompletionMessage(content='2 is more confident', role='assistant', function_call=None, tool_calls=None)",2
+calhams,appreffinge,"ChatCompletionMessage(content='2 is more confident', role='assistant', function_call=None, tool_calls=None)",2
+calhams,derpenording,"ChatCompletionMessage(content='2 is more confident', role='assistant', function_call=None, tool_calls=None)",2
+calhams,mamenthstarz,"ChatCompletionMessage(content='2 is more confident', role='assistant', function_call=None, tool_calls=None)",2
+appreffinge,derpenording,"ChatCompletionMessage(content='0; neither is more confident', role='assistant', function_call=None, tool_calls=None)",0
+appreffinge,mamenthstarz,"ChatCompletionMessage(content='2 is more confident', role='assistant', function_call=None, tool_calls=None)",2
+derpenording,mamenthstarz,"ChatCompletionMessage(content='1 is more confident', role='assistant', function_call=None, tool_calls=None)",1
+luscepited,calhams,"ChatCompletionMessage(content='1 is more confident', role='assistant', function_call=None, tool_calls=None)",1
+luscepited,appreffinge,"ChatCompletionMessage(content='1 is more confident', role='assistant', function_call=None, tool_calls=None)",1
+luscepited,derpenording,"ChatCompletionMessage(content='2 is more confident', role='assistant', function_call=None, tool_calls=None)",2
+luscepited,mamenthstarz,"ChatCompletionMessage(content='1 is more confident', role='assistant', function_call=None, tool_calls=None)",1
+calhams,appreffinge,"ChatCompletionMessage(content='2 is more confident', role='assistant', function_call=None, tool_calls=None)",2
+calhams,derpenording,"ChatCompletionMessage(content='2 is more confident', role='assistant', function_call=None, tool_calls=None)",2
+calhams,mamenthstarz,"ChatCompletionMessage(content='2 is more confident', role='assistant', function_call=None, tool_calls=None)",2
+appreffinge,derpenording,"ChatCompletionMessage(content='2 is more confident', role='assistant', function_call=None, tool_calls=None)",2
+appreffinge,mamenthstarz,"ChatCompletionMessage(content='1 is more confident', role='assistant', function_call=None, tool_calls=None)",1
+derpenording,mamenthstarz,"ChatCompletionMessage(content='0; neither is more confident', role='assistant', function_call=None, tool_calls=None)",0

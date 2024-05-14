@@ -7,7 +7,7 @@ from lm_studio_api import compare_confidence
 
 # function that reads confidence_phrases.txt, whose content is phrases seperated by newlines, into a list
 def read_confidence_phrases():
-    file_path = 'confidence_phrases.csv'
+    file_path = 'data/confidence_phrases.csv'
     df = pd.read_csv(file_path)
     return df
 
@@ -43,6 +43,7 @@ def main():
             print(sentence_2)
             user_message = "sentence 1: " + sentence_1 + "\n" + \
                             "sentence 2: " + sentence_2
+            print(user_message)
             llm_message = compare_confidence(user_message)
             print(f"completion Time: {time.time() - start_time:.2f}")
             print(llm_message)
