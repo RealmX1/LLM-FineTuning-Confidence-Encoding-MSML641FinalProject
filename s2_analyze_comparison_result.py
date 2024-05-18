@@ -10,27 +10,18 @@ import pandas as pd
 #                    'Comparison': ['1A is better than B', '2B is not as good as A', '3C is similar to D']})
 
 
-def check_end_with_i(comparison, i, tails):
-    for tail in tails:
-        if comparison.endswith(str(i) + tail):
-            return True
-    return False
+
 
 def get_comparison_result(comparison):
-    tail_base = r"', role='assistant', function_call=None, tool_calls=None)"
-    tail1 = r"\\n" + tail_base
-    tail2 = r"<</SYS>>[/INST]" + tail_base
-    tail3 = r"<</SYS>>[/INST]\\n" + tail_base
-    
-    tails = [tail1, tail2, tail3]
+    tail = ''
     
     # print comparison as raw string
     
-    if check_end_with_i(comparison, 1, tails):
+    if comparison.endswith('1' + tail):
         return 1
-    elif check_end_with_i(comparison, 2, tails):
+    elif comparison.endswith('2' + tail):
         return 2
-    elif check_end_with_i(comparison, 0, tails):
+    elif comparison.endswith('0' + tail):
         return 0
     else:
         print(repr(comparison))
@@ -45,8 +36,10 @@ def update_counts(phrase_confidence_ranking_df, sentence_id, result):
         phrase_confidence_ranking_df.loc[sentence_id, 'wins'] += 1
     elif result == 2:
         phrase_confidence_ranking_df.loc[sentence_id, 'losses'] += 1
-    else:
+    elif result == 0:
         phrase_confidence_ranking_df.loc[sentence_id, 'draws'] += 1
+    else:
+        phrase_confidence_ranking_df.loc[sentence_id, 'unclear'] += 1
 
 
 def main(args):
@@ -68,10 +61,11 @@ def main(args):
     phrase_confidence_ranking_df['wins'] = 0
     phrase_confidence_ranking_df['losses'] = 0
     phrase_confidence_ranking_df['draws'] = 0
+    phrase_confidence_ranking_df['unclear'] = 0
     sentence_to_index = {sentence: index for index, sentence in enumerate(phrase_confidence_ranking_df['sentence'])}
-    print(phrase_confidence_ranking_df)
-    for key, value in sentence_to_index.items():
-        print(key, value)
+    # print(phrase_confidence_ranking_df)
+    # for key, value in sentence_to_index.items():
+    #     print(key, value)
         
         
 

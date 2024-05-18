@@ -1,41 +1,41 @@
-sentence,wins,losses,draws,net_wins
-It is clear that PLACEHOLDER is true.,0,0,80,0
-I'm positive that PLACEHOLDER is true.,0,0,80,0
-I'd say PLACEHOLDER is true.,0,0,80,0
-"Without a doubt, PLACEHOLDER is true.",0,0,80,0
-"If I had to guess,I'd say PLACEHOLDER is true.",0,0,80,0
-"Certainly, PLACEHOLDER is true.",0,0,80,0
-"From what I can tell, PLACEHOLDER is true.",0,0,80,0
-I'm 100% positive that PLACEHOLDER is true.,0,0,80,0
-I think PLACEHOLDER is true.,0,0,80,0
-I'm sure that PLACEHOLDER is true.,0,0,80,0
-"To the best of my knowledge, PLACEHOLDER is true.",0,0,80,0
-I'm absolutely convinced that PLACEHOLDER is true.,0,0,80,0
-It's likely that PLACEHOLDER is true.,0,0,80,0
-I'm quite certain that PLACEHOLDER is true.,0,0,80,0
-I have no reservations in saying PLACEHOLDER is true.,0,0,80,0
-I'm certain that PLACEHOLDER is true.,0,0,80,0
-"As far as I know, PLACEHOLDER is true.",0,0,80,0
-It is probably true that PLACEHOLDER is true.,0,0,80,0
-There's no question about it; PLACEHOLDER is true.,0,0,80,0
-It's an indisputable fact that PLACEHOLDER is true.,0,0,80,0
-"Absolutely, PLACEHOLDER is true.",0,0,80,0
-It could be that PLACEHOLDER is true.,0,0,80,0
-"Undoubtedly, PLACEHOLDER is true.",0,0,80,0
-I'm inclined to believe PLACEHOLDER is true.,0,0,80,0
-It's possible that PLACEHOLDER is true.,0,0,80,0
-"Arguably, PLACEHOLDER is true.",0,0,80,0
-"Assuredly, PLACEHOLDER is true.",0,0,80,0
-It seems that PLACEHOLDER is true.,0,0,80,0
-I'm unsure if PLACEHOLDER is true.,0,0,80,0
-PLACEHOLDER is definitely true.,0,0,80,0
-Perhaps PLACEHOLDER is true.,0,0,80,0
-I am convinced that PLACEHOLDER is true.,0,0,80,0
-There is a chance that PLACEHOLDER is true.,0,0,80,0
-I believe PLACEHOLDER is true.,0,0,80,0
-I suspect PLACEHOLDER is true.,0,0,80,0
-Chances are PLACEHOLDER is true.,0,0,80,0
-I assume PLACEHOLDER is true.,0,0,80,0
-PLACEHOLDER might be true.,0,0,80,0
-It appears that PLACEHOLDER is true.,0,0,80,0
-It is possibly true that PLACEHOLDER is true.,0,0,80,0
+sentence,wins,losses,draws,unclear,net_wins
+"Assuredly, PLACEHOLDER is true.",5,0,1,74,5
+It is clear that PLACEHOLDER is true.,4,0,2,74,4
+"Undoubtedly, PLACEHOLDER is true.",3,0,0,77,3
+I have no reservations in saying PLACEHOLDER is true.,4,1,1,74,3
+There is a chance that PLACEHOLDER is true.,4,1,3,72,3
+It is possibly true that PLACEHOLDER is true.,3,0,0,77,3
+It's an indisputable fact that PLACEHOLDER is true.,3,1,1,75,2
+"As far as I know, PLACEHOLDER is true.",3,1,3,73,2
+It's likely that PLACEHOLDER is true.,5,3,0,72,2
+I suspect PLACEHOLDER is true.,2,0,1,77,2
+It could be that PLACEHOLDER is true.,3,1,0,76,2
+I am convinced that PLACEHOLDER is true.,2,0,1,77,2
+I'm unsure if PLACEHOLDER is true.,3,2,1,74,1
+Perhaps PLACEHOLDER is true.,1,0,1,78,1
+It appears that PLACEHOLDER is true.,1,0,0,79,1
+I'm 100% positive that PLACEHOLDER is true.,2,1,1,76,1
+I think PLACEHOLDER is true.,2,1,4,73,1
+There's no question about it; PLACEHOLDER is true.,4,3,1,72,1
+"To the best of my knowledge, PLACEHOLDER is true.",3,3,3,71,0
+PLACEHOLDER might be true.,1,1,0,78,0
+"Arguably, PLACEHOLDER is true.",0,0,1,79,0
+I believe PLACEHOLDER is true.,1,2,0,77,-1
+"Absolutely, PLACEHOLDER is true.",1,2,1,76,-1
+"If I had to guess,I'd say PLACEHOLDER is true.",2,3,0,75,-1
+I'm absolutely convinced that PLACEHOLDER is true.,3,4,2,71,-1
+I'm quite certain that PLACEHOLDER is true.,3,4,0,73,-1
+I assume PLACEHOLDER is true.,4,5,1,70,-1
+It seems that PLACEHOLDER is true.,2,3,1,74,-1
+I'm certain that PLACEHOLDER is true.,1,2,1,76,-1
+"From what I can tell, PLACEHOLDER is true.",1,3,1,75,-2
+I'd say PLACEHOLDER is true.,1,3,1,75,-2
+"Without a doubt, PLACEHOLDER is true.",1,3,2,74,-2
+Chances are PLACEHOLDER is true.,2,4,0,74,-2
+It's possible that PLACEHOLDER is true.,1,3,0,76,-2
+I'm positive that PLACEHOLDER is true.,2,4,3,71,-2
+I'm sure that PLACEHOLDER is true.,4,6,0,70,-2
+"Certainly, PLACEHOLDER is true.",2,5,0,73,-3
+PLACEHOLDER is definitely true.,0,4,0,76,-4
+I'm inclined to believe PLACEHOLDER is true.,3,7,2,68,-4
+It is probably true that PLACEHOLDER is true.,1,7,1,71,-6

@@ -103,7 +103,8 @@ def random_baseline(num_domains = 5):
 def main():
     comparison_file_names = ['domain_comparison_llama2-13b_manual', 
                              'domain_comparison_llama2-13b_finetune', 
-                             'domain_comparison_llama2-7b_finetune']
+                             'domain_comparison_llama2-7b_finetune',
+                             'domain_comparison_tineyllama-1b_finetune']
     for file_name in comparison_file_names:
         data_path = f'data/{file_name}.csv'
         edit_distance = evaluate_comparison_result(data_path)
@@ -121,7 +122,7 @@ def main():
     average_edit_distance = total_edit_distance / random_baseline_num
 
     # Print the average edit distance in green
-    print("\033[92m" + f"Average edit distance for {random_baseline_num} random baselines: {average_edit_distance}" + "\033[0m")
+    print("\033[92m" + f"\nAverage edit distance for {random_baseline_num} random baselines: {average_edit_distance}" + "\033[0m")
 
 
 if __name__ == "__main__":

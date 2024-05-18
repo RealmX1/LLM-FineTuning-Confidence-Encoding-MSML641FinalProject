@@ -23,22 +23,22 @@ compare_confidence_instruction = \
     "You are tasked with comparing difference in confidence embedded in a pair of sentences and choosing the more confident one. Your answer should end with result = 1 if you think sentence 1 is more confident, Your answer should end with result = 2 if you think sentence 2 is more confident, and if you are uncertain, end with result = 0. Here are a few examples for the input you'll receive followed by expected outputs:\n" + \
     "Example 1:\n" + \
     "Input:\n" + \
-    "Sentence 1: Without a doubt, PLACEHOLDER is true.\n" + \
-    "Sentence 2: It's possible that PLACEHOLDER is true.\n" + \
+    "'Sentence 1: Without a doubt, PLACEHOLDER is true.\n" + \
+    "Sentence 2: It's possible that PLACEHOLDER is true.'\n" + \
     "Output:\n" + \
     "'Sentence 1 is more confident. result = 1'\n\n" + \
         \
     "Example 2:\n" + \
-    "Input:\n" + \
-    "Sentence 1: It is likely that PLACEHOLDER is true.\n" + \
-    "Sentence 2: From the best of my knowledge, PLACEHOLDER is true.\n" + \
+    "Input:" + \
+    "'Sentence 1: It is likely that PLACEHOLDER is true.\n" + \
+    "Sentence 2: From the best of my knowledge, PLACEHOLDER is true.'\n" + \
     "Output:\n" + \
     "'Sentence 2 is more confident. result = 2'\n\n"+ \
         \
     "Example 3:\n" + \
     "Input:\n" + \
-    "Sentence 1: I have no reservations in saying PLACEHOLDER is true.\n" + \
-    "Sentence 2: I'm sure that PLACEHOLDER is true.\n" + \
+    "'Sentence 1: I have no reservations in saying PLACEHOLDER is true.\n" + \
+    "Sentence 2: I'm sure that PLACEHOLDER is true.'\n" + \
     "Output:\n" + \
     "'Neither is more confident. result = 0'"
 
